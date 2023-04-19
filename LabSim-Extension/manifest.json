@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "LabSim Helper",
+    "version": "1.0",
+    "description": "This extension helps you to finish your LabSim readings and videos faster.",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "activeTab",
+        "<all_urls>"
+      ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+      },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["index.js"]
+        }
+      ]
+    
+  }
+  
